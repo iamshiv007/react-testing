@@ -1,10 +1,17 @@
 // WelcomeComponent.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WelcomeComponent = () => {
+  const [greet, setGreet] = useState('');
+
+  useEffect(() => {
+      setGreet('Hi there');
+
+  }, []);
+  
   return (
     <div>
-      <h1>Welcome to My React app!</h1>
+      <h1>{greet}</h1>
       <p>Thanks for visiting.</p>
     </div>
   );
