@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "../App";
 
 test("test for input field", () => {
@@ -9,4 +9,8 @@ test("test for input field", () => {
 
     expect(inputField).toBeInTheDocument()
     expect(inputFieldByRole).toBeInTheDocument()
-  })
+
+    fireEvent.change(inputField, { target: { value: "a" } })
+
+    expect(inputField.value).toBe("atest")
+})
