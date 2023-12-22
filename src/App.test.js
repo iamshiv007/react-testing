@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-describe.skip("ui test group", () => {
+describe.only("ui test group", () => {
   test('test for first react app', () => {
     render(<App />)
     const appText = screen.getByText(/First REACT App/i)
