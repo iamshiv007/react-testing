@@ -14,3 +14,15 @@ test("test for input field", () => {
 
     expect(inputField.value).toBe("atest")
 })
+
+test("test for button click", () => {
+    render(<App/>)
+    const button = screen.getByRole("button")
+
+    const notClickedText = screen.getByText("Button not clicked")
+    expect(notClickedText).toBeInTheDocument()
+    fireEvent.click(button)
+
+    const clickedText = screen.getByText("Button clicked")
+    expect(clickedText).toBeInTheDocument()
+})
