@@ -13,5 +13,5 @@ test("function component testing", () => {
 test("test getUserList function", () => {
     render(<app />)
 
-    expect(getUserList()).toBe("user lis")
+    expect(getUserList()).toBe("user list")
 })
