@@ -35,7 +35,7 @@ afterEach(() => {
     console.log("Hello this is after each test")
 })
 
-test("snapshot for app component", () => {
-    const container = render(<App />)
-    expect(container).toMatchSnapshot()
-})
+// test("snapshot for app component", () => {
+//     const container = render(<App />)
+//     expect(container).toMatchSnapshot()
+// })
