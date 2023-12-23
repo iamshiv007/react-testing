@@ -9,7 +9,7 @@ test("test for input field", () => {
     render(<App />)
 
     const inputField = screen.getByPlaceholderText(/This is demo input box/)
-    const inputFieldByRole = screen.getByRole("textbox")    
+    const inputFieldByRole = screen.getByRole("textbox")
 
     expect(inputField).toBeInTheDocument()
     expect(inputFieldByRole).toBeInTheDocument()
@@ -33,4 +33,9 @@ test("test for button click", () => {
 
 afterEach(() => {
     console.log("Hello this is after each test")
+})
+
+test("snapshot for app component", () => {
+    const container = render(<App />)
+    expect(container).toMatchSnapshot()
 })
